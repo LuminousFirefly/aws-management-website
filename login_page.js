@@ -35,7 +35,7 @@ async function handleLogin(event) {
 
     const dynamodb = await create_dynamodb();
 
-    console.log("DYNAMO CREATED!");
+    console.log("AWS and DynamoDB configured.");
     
       dynamodb.get(params, function(err, data) {
         if (err) {
@@ -86,7 +86,7 @@ async function handleSignup(event)
             console.error('Unable to add item. Error JSON:', JSON.stringify(err, null, 2));
         } else {
             console.log('Added item:', JSON.stringify(data, null, 2));
-            window.location.href = "login_page.html";
+            window.location.href = "index.html";
         }
     });
 
