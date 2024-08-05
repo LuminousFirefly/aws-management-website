@@ -10,6 +10,7 @@ async function create_dynamodb()
       credentials: new AWS.Credentials(config.accessKeyId, config.secretAccessKey)
     });
     console.log("AWS SDK configured with fetched credentials");
+    console.log(`key1/2 = ${config.accessKeyId+config.secretAccessKey}, region = ${config.region}`)
   })
   .catch(error => {
     console.error("Error fetching config.json:", error);
